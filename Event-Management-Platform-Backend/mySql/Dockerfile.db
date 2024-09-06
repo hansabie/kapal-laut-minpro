@@ -1,0 +1,7 @@
+# Use MySQL 5.7 as the base image
+FROM mysql:5.7
+
+ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_DATABASE=medicine
+
+COPY ./init.sql /docker-entrypoint-initdb.d/
